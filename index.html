@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Poppins&family=Roboto+Mono:ital,wght@1,100&family=Stardos+Stencil:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <link rel="stylesheet" href="style.css">
+    <title>El Cuartel</title>
+    <link rel="shortcut icon" href="./MenuCuartel/favicon.ico">
+</head>
+<body>
+    <div class="bgimg display-container">
+
+        <div class="box-top">
+            <div class="menu-top-left">
+                <p><button onclick="document.getElementById('menu').style.display='block'" class=" modal-btn"> menu </button></p>
+                <p><button onclick="document.getElementById('contact').style.display='block'" class=" modal-btn-contact"> contactanos </button></p>
+            </div>
+            <div class="user-box">
+                <span class="user-menu" onclick="openNav()"><i class="far fa-user fa-lg"></i></span>
+            </div>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Registrarse</a>
+            <a href="#">Ingresar</a>
+            <a href="#"><i class="fas fa-shopping-cart fa-flip-horizontal"></i></a>  
+        </div>
+
+        <div class="button-left">
+            <p class="time f-white">Lun - Mie: 3:00 10:30</p>
+            <p class="time f-white">Jue - Sab: 3:30 11:00</p>
+            <p class="address f-white">Av La Florida, 8345</p>
+            <p class="createby">Desarrollado por <a href="#" target="_blank" rel="noopener noreferrer">Guillermo Sequera</a></p>
+        </div>
+    </div>
+
+
+    <!-- Menu Modal -->
+    <div id="menu" class="modal">
+        <div class="modal-content animate-zoom">
+            <div class="container display-container btn-option">
+            </div>
+            <div class="container section-menu" id="section" >
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact" class="modal">
+        <div class="modal-content animate-zoom">
+            <span onclick="document.getElementById('contact').style.display='none'" class="button display-topright large">x</span>
+                <p class="subtitle">Para cualquier duda, recomendacion o reclamo, comunicate con nosotros</p>
+            <form id="form" class="form" action="https://formspree.io/f/mwkygqky" method="POST">
+                <h3 class="tag"><span>Contactanos</span></h3>
+                <div class="icons">
+                    <a href="https://wa.me/message/UMIO7OP5HZZSO1" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/elcuartel_/?hl=es" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <label for="name">Nombre Completo <span>*</span></label>
+                <input name="name" required type="text" id="name" placeholder="Pedro Perez"/>
+                <label for="email">Correo Electronico <span>*</span></label>
+                <input name="email" type="text" id="email" required placeholder="pedroperez@gmail.com"/>
+                <label for="message">Mensaje</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <button type="submit" class="btn primery full">enviar mensaje</button>       
+            </form>
+            <a href="mailito:elcuarteluno@gmail.com" id="receptor"></a>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong>Gracias por contactarnos!</strong> Intentaremos responderte lo antes posible.
+            </div>
+            </div>
+        </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
