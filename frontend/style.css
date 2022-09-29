@@ -10,7 +10,7 @@ body, html{
 }
 
 .bgimg {
-  background-image: url('/img/Screenshot_2022-07-04-22-06-59-811_com.adobe.lrmobile.jpg');
+  background-image: url('/frontend/img/Screenshot_2022-07-04-22-06-59-811_com.adobe.lrmobile.jpg');
   min-height: 100%;
   background-position: center;
   background-size: cover;
